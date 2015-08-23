@@ -46,5 +46,10 @@
         "single"
       ]
     }
+  },
+  "dependencies": {
+    "coffee-script": "^1.9.3",
+    "express": "^4.13.3",
+    "gzippo": "^0.2.0"
   }
 }
