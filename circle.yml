@@ -1,0 +1,10 @@
+dependencies:
+  override:
+    - npm install
+    - bower install
+    - grunt build
+deployment:
+  staging:
+    branch: master
+    heroku:
+      appname: ancient-reaches-5609
