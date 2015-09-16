@@ -9,3 +9,7 @@
 p.lead {
   font-size: 1.1rem;
 }
+
+#bursary-extra {
+  display: none;
+}

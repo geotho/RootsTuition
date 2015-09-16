@@ -79,48 +79,50 @@ Please fill in the form below. Oli or George will contact you within 24 hours.
     </p>
     <div class="checkbox">
       <label>
-        <input type="checkbox" name="entry.1661616295" value="I would like to be considered for a bursary" id="bursaryCheckbox">
+        <input type="checkbox" name="entry.1661616295" value="I would like to be considered for a bursary" id="bursaryCheckbox" onchange="toggleBursary(this);">
         I would like to be considered for a bursary.
       </label>
     </div>
   </div>
-  <div class="form-group">
-    <label for="entry.1022475576">Please provide further details about your situation.</label>
-    <div class="checkbox">
-      <label>
-        <input type="checkbox" name="entry.1022475576" value="Student lives in a single-parent household.">
-        Student lives in a single-parent household.
-      </label>
-    </div>
-    <div class="checkbox">
-      <label>
-        <input type="checkbox" name="entry.1022475576" value="Student is eligible for free school meals.">
-        Student is eligible for free school meals.
-      </label>
-    </div>
-    <div class="checkbox">
-      <label>
-        <input type="checkbox" name="entry.1022475576" value="Student is first in family to go to university.">
-        Student is first in family to go to university.
-      </label>
-    </div>
-    <div class="checkbox">
-      <label>
-        <input type="checkbox" name="entry.1022475576" value="Student attends a state comprehensive school.">
-        Student attends a state comprehensive school.
-      </label>
-    </div>
-    <div class="checkbox">
-      <label>
-        <input type="checkbox" name="entry.1022475576" value="Student attends a school that does not have a history of sending students to top universities.">
-        Student attends a school that does not have a history of sending students to top universities.
-      </label>
-    </div>
-    <div class="checkbox">
-      <label>
-        <input type="checkbox" name="entry.1022475576" value="Student has experienced other significant disruption to education due to e.g. bereavement, illness etc.">
-        Student has experienced other significant disruption to education due to e.g. bereavement, illness etc.
-      </label>
+  <div id="bursary-extra">
+    <div class="form-group">
+      <label for="entry.1022475576">Please provide further details about your situation.</label>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="entry.1022475576" value="Student lives in a single-parent household.">
+          Student lives in a single-parent household.
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="entry.1022475576" value="Student is eligible for free school meals.">
+          Student is eligible for free school meals.
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="entry.1022475576" value="Student is first in family to go to university.">
+          Student is first in family to go to university.
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="entry.1022475576" value="Student attends a state comprehensive school.">
+          Student attends a state comprehensive school.
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="entry.1022475576" value="Student attends a school that does not have a history of sending students to top universities.">
+          Student attends a school that does not have a history of sending students to top universities.
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="entry.1022475576" value="Student has experienced other significant disruption to education due to e.g. bereavement, illness etc.">
+          Student has experienced other significant disruption to education due to e.g. bereavement, illness etc.
+        </label>
+      </div>
     </div>
   </div>
   <div class="form-group">
@@ -129,13 +131,8 @@ Please fill in the form below. Oli or George will contact you within 24 hours.
 </form>
 
 <script>
-  $(".bursary-extra").hide();
-  $('#bursaryCheckbox').click(function() {
-    if ($(this).is(':checked')) {
-        $(".bursary-extra").slideDown();
-    } else {
-        $(".bursary-extra").slideUp();
-    }
-  });
-
+  function toggleBursary(checkbox) {
+    console.log(checkbox);
+    document.getElementById("bursary-extra").style.display = checkbox.checked ? "block" : "none";
+  }
 </script>
